@@ -1,0 +1,13 @@
+.cell{
+    text-align: center;
+    
+}
+
+.main-text{
+    font-weight: bold;
+    font-size: large;
+}
+
+body{
+    background-color: rgb(240, 239, 239);
+}

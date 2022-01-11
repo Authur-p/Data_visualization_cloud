@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Daniel's Data Visualization Assignment</title>
+
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='css/main.css') }}">
+
+  </head>
+  <body>
+      <h1 align="center">Per state capital of Gross Domestic Products in Africa</h1>
+
+    <div class="cell">
+        <p class="main-text">
+            In the bar plots below, what we see is the Per State Capital of GDP in Africa
+            from the years 2010-2019
+        </p>
+
+        {% for i in range(2010, 2019, 1) %}
+          <img src="{{ url_for('static', filename='images/hbars_'+i|string+'.png') }}" width="70%" >
+        {% endfor %}
+
+      </div>
+
+
+      <div  class="cell">
+        <p class="main-text">
+            The line graphs show below the different measures of dispersion(as indicated by the legend),
+            for the observation values in the bar plots above
+        </p>
+        <img src="{{ url_for('static', filename='images/dispersion.png') }}" width="40%">
+        
+      </div>
+
+
+      <div  class="cell">
+        <p class="main-text">
+            Due to difference in values, the plot below is a separate plot for Variance and Range
+        </p>
+        <img src="{{ url_for('static', filename='images/Variance.jpg') }}" width="40%">
+        <img src="{{ url_for('static', filename='images/Range.jpg') }}" width="40%">
+
+      </div>
+
+
+
+      <div  class="cell">
+        <p class="main-text">
+            We can also decide to visualize the median and interquartile ranges with the help of a boxplot. 
+            The diagram below helps us understand its structure.
+        </p>
+            <img src="https://miro.medium.com/max/1400/1*2c21SkzJMf3frPXPAR_gZA.png" width="30%">
+            <br />
+            <br />
+            <br />
+
+            <img src="{{ url_for('static', filename='images/boxplots.jpg') }}" width="70%">
+
+
+
+      </div>
+
+  </body>
+</html>
